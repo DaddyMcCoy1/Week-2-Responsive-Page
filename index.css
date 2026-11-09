@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+* {
+    font-family: 'Merienda', sans-serif;
+}
+body {
+    font-family: 'Merienda', sans-serif;
+    background-color: #ece5ec;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+}
+.cards {
+    display:flex;
+    flex-direction: column; /*stack on mobile*/
+    gap: 16px;
+    padding: 24px;
+}
+
+.card {
+    flex: 1 1 100%; /*full width on mobile*/
+    padding: 24px;
+    border: 2px solid #371b3f;
+    border-radius: 12px;
+    background: #fff;
+    background-color: rgb(209, 231, 231);
+}
+/*Tablet: 2 columns at 600px+*/
+@media (min-width: 600px){
+     .cards {flex-direction: row; flex-wrap: wrap;}
+    .card {flex: 1 1 calc(33.333% - 16px)}
+}
+/*Desktop: 3 columns at 960px+*/
+@media (min-width: 960px){
+    .cards {flex-direction: row; flex-wrap: wrap;}
+    .card {flex: 1 1 calc(33.333% - 16px);}
+}
